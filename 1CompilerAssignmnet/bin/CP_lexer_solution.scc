@@ -1,0 +1,117 @@
+// *******************       Helpers       *******************************
+
+Helpers
+    all = [0..0xffff];
+    salpha = ['a' .. 'z'];
+    ualpha = [ 'A' .. 'Z'];
+    nums   = [ '0'..'9' ];
+    
+    dot = '.';
+    space  = ' ';          
+    dquote = '"';
+    squote = ''';
+    dslash = '//';
+    mcomment_start = '/*';
+    mcomment_end = '*/';
+    
+    allchars = [' ' .. '~'];
+    
+    suchars = [salpha + ualpha];
+    su_chars = [suchars + '_'];
+    charnums = [suchars + nums];
+    cns = [charnums + space ];
+    
+    lf  = 0x000a; // line feed
+    cr  = 0x000d; // carriage return
+    ff  = 0x000c; // form feed
+    ht  = 0x0009; // tab
+
+    new_line = lf | cr | cr lf ;
+    not_cr_lf = [all - [cr + lf]];
+    not_star = [all - '*'];
+    not_star_slash = [not_star - '/'];
+
+    nallchars = [allchars + [lf + cr]];
+    
+    //esc_chars = [[['\t' + '\b'] + ['\n' + '\r']] + [['\\' + '\"'] + '\f']];
+States
+    normal;
+    
+Tokens
+// *****************       Comments       ********************************
+    // comments
+    sline_comment = dslash (allchars)* new_line;
+    mline_comment = '/*' not_star* '*'+ (not_star_slash not_star* '*'+ )* '/';
+    white_space          = (space | ht | ff | new_line)*;
+
+
+// *****************       Literals       ********************************
+    // literals
+    string_lit = dquote (cns* ('\t' | '\b' | '\n' | '\r' | '\\' | '\"' | '\f' | '''|('\' '''))* cns*)* dquote ;
+    char_lit = squote (allchars |'\t' | '\b' | '\n' | '\r' | '\\' | '\"' | '\f'|('\' ''')) squote ;
+    int_lit = nums+;
+    float_lit = ((nums* dot nums+) |(nums+ dot nums*))(['e' + 'E'] ['+' + '-']? nums+)*;
+
+
+// *****************       Operators       *******************************
+    // operators
+    kplus_operator = '+';
+    kminus_operator = '-';
+    kmultiplication_operator = '*';
+    division_operator = '/';
+    klessthen = '<';
+    klessthen_or_equal = '<=';
+    kgreaterthen = '>';
+    kgreaterthen_or_equal = '>=';
+    kcomparison_operator = '==';
+    kand = '&&';
+    kor = '||';
+    knot_operator = '!';
+    kconditional_colon_operator = ':';
+    ksemicolon = ';';
+    kcomma = ',';
+    kleft_brace = '(';
+    kright_brace = ')';
+    kleft_curly  = '{';
+    kright_curly = '}';
+    kleft_square = '[';
+    kright_square = ']';
+    knot_equals_comparison = '!=';
+    kequals = '=';
+    karrow_operator = '->';
+    kbitwise_xor_operator = '^';
+    kmodulo_disison_operator = '%';
+    kdot_operator = '.';
+    kbitwise_and_operator = '&';
+    kbitwise_or_operator = '|';
+
+// *****************       Reserved Words       ******************************
+    // keywords
+    kclass = 'class';
+    kbool = 'bool';
+    kbreak = 'break';
+    kchar = 'char';
+    kcontinue = 'continue';
+    kdo = 'do';
+    kelse = 'else';
+    kfalse = 'false';
+    kfloat = 'float';
+    kif = 'if';
+    kint = 'int';
+    knull = 'null';
+    knew = 'new';
+    kprivate = 'private';
+    kprotected = 'protected';
+    kpublic = 'public';
+    kreturn = 'return';
+    kstatic = 'static';
+    kstring = 'string';
+    kthis = 'this';
+    ktrue = 'true';
+    kwhile = 'while';
+    kvoid = 'void';
+    kconst = 'const';
+
+// identifiers
+    kidentifier = su_chars (su_chars | nums)*;
+

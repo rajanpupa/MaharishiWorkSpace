@@ -1,0 +1,69 @@
+' ''!''"''#''$''%''&''\'''('')''*''+'',''-''.''/''0''1''2''3''4''5''6''7''8'
+'9'':'';''<''=''>''?''@''A''B''C''D''E''F''G''H''I''J''K''L''M''N''O''P''Q'
+'R''S''T''U''V''W''X''Y''Z''[''\\'']''^''_''`''a''b''c''d''e''f''g''h''i''j'
+'k''l''m''n''o''p''q''r''s''t''u''v''w''x''y''z''{''|''}''~'
+class g1{
+    char ch='c';
+    int i = 54;
+    bool b=false;
+    do {
+    } while (false);
+    
+    while(true){
+        if(x==99) continue;
+        print(546980000);
+        read(-8374839);
+        // This is single comment line
+        "Real good program\tand \\"
+        /* Multi
+        line 
+        comment*/  false =true+37 || && <= >= 78;
+        return;
+        [] () -> {};
+    }
+    
+    if(){
+      //if block   
+      "if block"
+    }
+    else{
+        "else block"    
+    }
+    
+    dig/sig*pg+54-ty
+    
+    7t7t7t7t  // integer literal 7 followed by identifier t7t7t7t
+ 
+ 4/5
+ "skipped line due to single line comment"
+ // This is a single line comment
+ " This is a string  \t and\"\\\\\" \n  \\"
+"See the Skipped lines for multiline comment below"
+/* this is * a 
+multiline /* 
+# comment /
+yes it is */ 4/5
+
+/*** // Two Multiline comments each on a single line*/
+f=g+h; class   
+dksfiu
+afoihje = /a+aofd[+]eple
+ldmfjemd
+d;f
+"lkadjfioadsjfoieiurheitnirhtoir\\erpkronjiohdjfhioejoijreihtiueiuftbruegbuiriutnrieutiuretuireuitburiut"
+"long identifier"
+jkhroeingtiorej8945789yewn985y438hbf43943u5985rbuieyr8743i985hdfoijht8943h
+"long identifier delimitor"'\t'
++dklfjoi973849yndiuy8943whrnef0320985798d
+/77654g64
+/*kdljfiokdjfkjd*did/jf44
+
+dl;fkjoe
+
+dklfjioe*/rkjojriotj04455;kmtou5096uk   0-21=87/97684g;orkt
+dfkloijrtf
+,dofk
+4,mbjuxz53r7
+,f struct
+^  // this is an unknown token
+.    %

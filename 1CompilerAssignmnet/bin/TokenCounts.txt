@@ -1,0 +1,20 @@
+all.out: Token count=261
+
+char_test.out: Token count=93
+
+comments_test.out: Token count=22
+
+esc_char_test.out: Token count=103
+
+esc_string_test.out: Token count=11
+
+float_test.out: Token count=30
+
+op_test.out: Token count=24
+
+rw_test.out: Token count=28
+
+string_test.out: Token count=9
+
+
+

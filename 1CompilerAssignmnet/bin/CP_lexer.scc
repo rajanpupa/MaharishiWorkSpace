@@ -1,0 +1,74 @@
+
+
+// *******************       Helpers       *******************************
+//Package sample.cplexer ;
+
+Helpers
+    // example helper regular expressions
+
+    all = [0..0xffff];
+    space  = ' ';          
+    lf  = 0x000a; // line feed
+    cr  = 0x000d; // carriage return
+    ff  = 0x000c; // form feed
+    ht  = 0x0009; // tab
+
+    new_line = lf | cr | cr lf ;
+    not_cr_lf = [all - [cr + lf]];
+
+States
+    normal;
+    
+// *******************       Tokens       ********************************
+
+Tokens
+    // Example token:
+    // Do not change the white_space token below (LexerDriver uses it).
+    white_space          = (space | ht | ff | new_line)*;
+
+
+    // IMPORTANT INFORMATION:
+
+    /* Only lower case letters and "_" are allowed in token names, e.g., 
+
+       Xclass = 'class';  // illegal because of the capitalized "X"
+    */
+
+    // There is one other restriction in the naming of tokens.
+
+    /* The 'class' token (reserved word) CANNOT be named "class" because 
+     * SableCC will generate a method "getClass" that is already 
+     * defined in Object and cannot be overriden, i.e., the following 
+     * token definition (below) will cause the code generated 
+     * by SableCC not to compile.  
+
+       class = 'class';  // the generated TClass will not compile.  
+
+       xclass = 'class';  // would be OK
+       t_class = 'class';  // OK
+       k_class = 'class';  // OK
+
+     * Other Java reserved words can be used as token names.  For example:
+
+       implements = 'implements';  // also OK
+
+     */
+
+    // Of course token definitions cannot be inside of comments :-).  
+
+	
+// *****************       Comments       ********************************
+
+
+
+// *****************       Literals       ********************************
+
+
+
+// *****************       Operators       *******************************
+
+
+// *****************       Reserved Words       ******************************
+
+
+

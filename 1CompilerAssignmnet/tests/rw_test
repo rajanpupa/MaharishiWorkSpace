@@ -1,0 +1,8 @@
+
+bool  break  char  const  continue  class 
+do else false float if int 
+null new private protected public return static
+string this true while void 
+    
+// the above should be reserved words
+    7t7t7t7t  // integer literal 7 followed by identifier t7t7t7t

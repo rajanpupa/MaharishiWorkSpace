@@ -1,0 +1,33 @@
+Helpers 
+    alpha = [['a' .. 'z'] + [ 'A' .. 'Z']];
+    nums   = [ '0'..'9' ];
+    space  = ' ';
+    squote = ''';
+    
+    alphanums = [alpha + nums];
+    
+    special1 = [' ' .. '/'];
+    special2 = [':' .. '@'];
+    special3 = ['[' .. '`'];
+    special4 = ['{' .. '~'];
+    
+    special12 = [special1 + special2];
+    special34 = [special3 + special4];
+    
+    special1234 = [special12 + special34];
+    
+    allcars = [alphanums + special1234];
+    
+    lf  = 0x000a;
+    cr  = 0x000d;
+    ff  = 0x000c;
+    ht  = 0x0009;
+    new_line = lf | cr | cr lf ;
+    
+States
+    normal;
+
+Tokens 
+    white_space = (space | ht | ff | new_line)*;
+    str = squote allcars squote ;
+  

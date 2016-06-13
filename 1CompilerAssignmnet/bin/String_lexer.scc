@@ -1,0 +1,24 @@
+Helpers 
+    salpha = ['a' .. 'z'];
+    ualpha = [ 'A' .. 'Z'];
+    nums   = [ '0'..'9' ];
+    space  = ' ';
+    dquote = '"';
+    nl = 10 ;
+    chars = [salpha + ualpha];
+    charnums = [chars + nums];
+    cns = [charnums + space ];
+    
+    lf  = 0x000a;
+    cr  = 0x000d;
+    ff  = 0x000c;
+    ht  = 0x0009;
+    new_line = lf | cr | cr lf ;
+    
+States
+    normal;
+
+Tokens 
+    white_space = (space | ht | ff | new_line)*;
+    str = dquote (cns)* dquote ;
+  

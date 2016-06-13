@@ -1,0 +1,11 @@
+        "Real good program\tand \\"
+      "if block"
+        "else block"    
+ "skipped line due to single line comment"
+ " This is a string  \t and\"\\\\\" \n  \\"
+"See the Skipped lines for multiline comment below"
+"lkadjfioadsjfoieiurheitnirhtoir\\erpkronjiohdjfhioejoijreihtiueiuftbruegbuiriutnrieutiuretuireuitburiut"
+"long identifier"
+"long identifier delimiter"'\t'
+"\b\t\n\f\r\" ' \' \\"
+
